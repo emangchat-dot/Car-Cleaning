@@ -46,11 +46,14 @@ Crystal Clean
 
 
 
-<!-- HERO -->
+
+<!-- HERO SECTION -->
 
 <section class="hero" id="home">
 
+
 <div class="hero-content">
+
 
 <h1>
 Professional Mobile Car Detailing
@@ -59,11 +62,12 @@ Professional Mobile Car Detailing
 
 <p>
 Premium cleaning services that bring your car back to showroom condition.
-We come directly to your home or workplace. Currently we are offering services in August at Hillcrest Christian College. Stay tuned for updates on the market day.
+We come directly to your home or workplace.
 </p>
 
 
 <div class="hero-buttons">
+
 
 <a href="#booking" class="primary-btn">
 Book Now
@@ -74,41 +78,70 @@ Book Now
 View Pricing
 </a>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 </section>
+
+
 
 
 
 
 <!-- STATS -->
 
+
 <section class="stats">
 
 
 <div>
+
 <h2>5+</h2>
-<p>Cars Detailed</p>
+
+<p>
+Cars Detailed
+</p>
+
 </div>
 
 
+
 <div>
+
 <h2>5+</h2>
-<p>Happy Customers</p>
+
+<p>
+Happy Customers
+</p>
+
 </div>
 
 
+
 <div>
+
 <h2>4★</h2>
-<p>Average Rating* (so far)</p>
+
+<p>
+Average Rating
+</p>
+
 </div>
 
 
+
 <div>
+
 <h2>1+</h2>
-<p>Year(s) Experience</p>
+
+<p>
+Years Experience
+</p>
+
 </div>
 
 
@@ -118,7 +151,11 @@ View Pricing
 
 
 
+
+
+
 <!-- SERVICES -->
+
 
 <section id="services">
 
@@ -128,7 +165,9 @@ Why Choose Us?
 </h2>
 
 
+
 <div class="features">
+
 
 
 <div class="feature">
@@ -190,6 +229,8 @@ Every vehicle receives careful attention to detail.
 
 
 
+
+
 <!-- GALLERY -->
 
 
@@ -199,6 +240,7 @@ Every vehicle receives careful attention to detail.
 <h2 class="section-title">
 Our Work
 </h2>
+
 
 
 <div class="slider">
@@ -232,9 +274,7 @@ alt="Sports car">
 alt="Car exterior">
 
 
-
 </div>
-
 
 
 
@@ -247,13 +287,6 @@ alt="Car exterior">
 
 
 </section>
-
-
-
-
-
-
-
 <!-- PRICING -->
 
 
@@ -388,6 +421,7 @@ Book Now
 
 
 
+
 <!-- REVIEWS -->
 
 
@@ -421,6 +455,7 @@ Customer Reviews
 
 
 
+
 <div class="review">
 
 ⭐⭐⭐⭐⭐
@@ -434,6 +469,7 @@ Customer Reviews
 </h4>
 
 </div>
+
 
 
 
@@ -465,6 +501,8 @@ Customer Reviews
 
 
 
+
+
 <!-- BOOKING -->
 
 
@@ -477,63 +515,110 @@ Book Your Appointment
 
 
 
-<form id="bookingForm">
+<form id="booking-form">
 
 
-<input type="text" placeholder="Full Name" required>
+
+<input 
+type="text"
+name="customer_name"
+placeholder="Full Name"
+required>
 
 
-<input type="email" placeholder="Email Address" required>
+
+<input 
+type="email"
+name="customer_email"
+placeholder="Email Address"
+required>
 
 
-<input type="tel" placeholder="Phone Number" required>
+
+<input 
+type="tel"
+name="phone"
+placeholder="Phone Number"
+required>
 
 
-<input type="text" placeholder="Vehicle Make & Model" required>
+
+<input 
+type="text"
+name="car"
+placeholder="Vehicle Make & Model"
+required>
 
 
-<select required>
 
-<option>
+
+
+<select name="service" required>
+
+
+<option value="Basic Wash - $20">
 Basic Wash - $20
 </option>
 
-<option>
+
+<option value="Premium Detail - $50">
 Premium Detail - $50
 </option>
 
-<option>
+
+<option value="Ultimate Detail - $100">
 Ultimate Detail - $100
 </option>
+
 
 </select>
 
 
-<input type="date" required>
 
 
-<input type="time" required>
+
+<input 
+type="date"
+name="date"
+required>
 
 
-<textarea placeholder="Additional notes and Address"></textarea>
+
+
+<input 
+type="time"
+name="time"
+required>
+
+
+
+
+
+<textarea
+
+name="notes"
+
+placeholder="Additional notes and Address">
+
+</textarea>
+
+
+
 
 
 <button type="submit">
+
 Confirm Booking
+
 </button>
+
+
 
 
 </form>
 
 
 </section>
-
-
-
-
-
-
-
 <!-- FOOTER -->
 
 
@@ -559,7 +644,94 @@ Professional mobile detailing service
 
 
 
+
+
+
+<!-- EMAILJS CONNECTION -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+<script>
+
+
+emailjs.init("bgVE9CXt6sEkG_oba");
+
+
+
+document
+.getElementById("booking-form")
+.addEventListener("submit", function(event){
+
+
+event.preventDefault();
+
+
+
+
+emailjs.sendForm(
+
+"service_nytxdji",
+
+"template_7ahxf22",
+
+this
+
+)
+
+
+
+.then(function(){
+
+
+
+alert(
+"Booking sent successfully! We will contact you soon."
+);
+
+
+
+document
+.getElementById("booking-form")
+.reset();
+
+
+
+})
+
+
+
+.catch(function(error){
+
+
+
+console.log(error);
+
+
+
+alert(
+"Something went wrong. Please try again."
+);
+
+
+
+});
+
+
+
+});
+
+
+
+</script>
+
+
+
+
+
 <script src="script.js"></script>
+
 
 
 </body>
