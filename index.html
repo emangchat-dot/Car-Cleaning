@@ -1,22 +1,426 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Crystal Clean Car Detailing</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#111;color:#fff}nav{position:fixed;top:0;width:100%;background:#000c;padding:15px 30px}nav a{color:#7ec8ff;margin-right:20px;text-decoration:none}.hero{height:90vh;background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}.hero h1{font-size:56px;text-shadow:2px 2px 8px #000}.sec{padding:80px 8%}.cards{display:flex;gap:20px;flex-wrap:wrap}.card{background:#1d1d1d;border-radius:14px;padding:20px;flex:1;min-width:240px}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px}form{display:grid;gap:12px;max-width:600px}input,select,textarea,button{padding:12px;border-radius:8px;border:none}button{background:#1e90ff;color:#fff;font-weight:bold}
-</style></head><body>
-<nav><a href="#pricing">Pricing</a><a href="#gallery">Gallery</a><a href="#book">Book</a></nav>
-<section class="hero"><div><h1>Crystal Clean Car Detailing</h1><p>Professional mobile detailing that makes your car shine.</p></div></section>
-<section class="sec" id="pricing"><h2>Our Pricing</h2><div class="cards">
-<div class="card"><h3>Basic Wash - $20</h3><ul><li>Foam Wash</li><li>Hand Dry</li><li>Wheel Cleaning</li><li>Spotless Finish</li></ul></div>
-<div class="card"><h3>Premium Detail - $50</h3><ul><li>Inside & Outside Clean</li><li>Vacuum</li><li>Windows</li></ul></div>
-<div class="card"><h3>Ultimate Detail - $100</h3><ul><li>Full Interior Detail</li><li>Full Exterior Detail</li><li>Tire Shine</li><li>Ceramic Wax</li></ul></div>
-</div></section>
-<section class="sec" id="gallery"><h2>Gallery</h2><div class="gallery">
-<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80">
-<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80">
-<img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80">
-<img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80">
-</div></section>
-<section class="sec" id="book"><h2>Book a Detail</h2>
-<form><input placeholder="Full Name"><input placeholder="Phone"><input type="email" placeholder="Email"><input placeholder="Vehicle Make & Model"><select><option>Basic Wash ($20)</option><option>Premium Detail ($50)</option><option>Ultimate Detail ($100)</option></select><input type="date"><input type="time"><textarea placeholder="Additional Notes"></textarea><button>Book Appointment</button></form>
-</section></body></html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crystal Clean Car Detailing</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-car"></i>
+
+        Crystal Clean
+
+    </div>
+
+    <ul>
+
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#services">Services</a></li>
+
+        <li><a href="#pricing">Pricing</a></li>
+
+        <li><a href="#gallery">Gallery</a></li>
+
+        <li><a href="#reviews">Reviews</a></li>
+
+        <li><a href="#booking">Booking</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>Professional Mobile Car Detailing</h1>
+
+<p>
+
+Bring back that showroom shine.
+
+Premium detailing that comes to you.
+
+Affordable prices. Amazing results.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#booking" class="primary-btn">
+
+Book Now
+
+</a>
+
+<a href="#pricing" class="secondary-btn">
+
+View Pricing
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+<div>
+
+<h2>500+</h2>
+
+<p>Cars Detailed</p>
+
+</div>
+
+<div>
+
+<h2>250+</h2>
+
+<p>Happy Customers</p>
+
+</div>
+
+<div>
+
+<h2>4.9★</h2>
+
+<p>Average Rating</p>
+
+</div>
+
+<div>
+
+<h2>5 Years</h2>
+
+<p>Experience</p>
+
+</div>
+
+</section>
+
+<!-- ================= WHY US ================= -->
+
+<section class="why-us">
+
+<h2>Why Choose Crystal Clean?</h2>
+
+<div class="features">
+
+<div class="feature">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>Mobile Service</h3>
+
+<p>We come directly to your home or workplace.</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-soap"></i>
+
+<h3>Premium Products</h3>
+
+<p>Only professional detailing chemicals are used.</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-star"></i>
+
+<h3>Guaranteed Quality</h3>
+
+<p>We don't leave until you're satisfied.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= IMAGE SLIDER ================= -->
+
+<section id="gallery">
+
+<h2 class="section-title">
+
+Our Work
+
+</h2>
+
+<div class="slider">
+
+<button class="prev">&#10094;</button>
+
+<div class="slides">
+
+<img src="images/car1.jpg">
+
+<img src="images/car2.jpg">
+
+<img src="images/car3.jpg">
+
+<img src="images/car4.jpg">
+
+</div>
+
+<button class="next">&#10095;</button>
+
+</div>
+
+</section>
+
+<!-- ================= PRICING ================= -->
+
+<section id="pricing">
+
+<h2 class="section-title">
+
+Pricing
+
+</h2>
+
+<div class="pricing-container">
+
+<div class="pricing-card">
+
+<h3>Basic Wash</h3>
+
+<div class="price">$20</div>
+
+<ul>
+
+<li>Foam Wash</li>
+
+<li>Hand Dry</li>
+
+<li>Wheel Cleaning</li>
+
+<li>Spotless Finish</li>
+
+</ul>
+
+<a href="#booking">
+
+Book Now
+
+</a>
+
+</div>
+
+<div class="pricing-card popular">
+
+<div class="popular-tag">
+
+Most Popular
+
+</div>
+
+<h3>Premium Detail</h3>
+
+<div class="price">$50</div>
+
+<ul>
+
+<li>Inside & Outside</li>
+
+<li>Vacuum</li>
+
+<li>Window Cleaning</li>
+
+</ul>
+
+<a href="#booking">
+
+Book Now
+
+</a>
+
+</div>
+
+<div class="pricing-card">
+
+<h3>Ultimate Detail</h3>
+
+<div class="price">$100</div>
+
+<ul>
+
+<li>Full Interior Detail</li>
+
+<li>Full Exterior Detail</li>
+
+<li>Tire Shine</li>
+
+<li>Ceramic Wax</li>
+
+</ul>
+
+<a href="#booking">
+
+Book Now
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= REVIEWS ================= -->
+
+<section id="reviews">
+
+<h2 class="section-title">
+
+Customer Reviews
+
+</h2>
+
+<div class="review-container">
+
+<div class="review">
+
+★★★★★
+
+<p>
+
+"My car looked brand new.
+
+Amazing attention to detail."
+
+</p>
+
+<h4>— Sarah</h4>
+
+</div>
+
+<div class="review">
+
+★★★★★
+
+<p>
+
+"Highly recommend!
+
+Professional and friendly."
+
+</p>
+
+<h4>— Michael</h4>
+
+</div>
+
+<div class="review">
+
+★★★★★
+
+<p>
+
+"The Ultimate Detail was worth every dollar."
+
+</p>
+
+<h4>— Emma</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BOOKING ================= -->
+
+<section id="booking">
+
+<h2 class="section-title">
+
+Book Your Appointment
+
+</h2>
+
+<form id="bookingForm">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<input type="text" placeholder="Vehicle Make & Model" required>
+
+<select required>
+
+<option>Basic Wash ($20)</option>
+
+<option>Premium Detail ($50)</option>
+
+<option>Ultimate Detail ($100)</option>
+
+</select>
+
+<input type="date" required>
+
+<input type="time" required>
+
+<textarea placeholder="Additional Notes"></textarea>
+
+<button type="submit">
+
+Book Appointment
+
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Crystal Clean Car Detailing
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
